@@ -1,0 +1,41 @@
+---
+driver:
+  name: docker
+
+# Special config for enabling systemd init
+default_driver_config: &default_driver_config
+  run_command: /sbin/init
+  cap_add:
+    - SYS_ADMIN
+  run_options:
+    env: container=docker
+  volume:
+    - /sys/fs/cgroup:/sys/fs/cgroup
+  provision_command:
+    - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+    - systemctl enable sshd.service
+
+transport:
+  # TODO: remove with better solution than workaround:
+  # https://github.com/test-kitchen/test-kitchen/issues/1035
+  max_ssh_sessions: 6
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-7
+    driver_config:
+      <<: *default_driver_config
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chef-cookbook-template::default]
+    verifier:
+      inspec_tests:
+        - test/integration/default
+    attributes:
