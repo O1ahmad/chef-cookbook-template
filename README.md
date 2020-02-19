@@ -1,4 +1,6 @@
-Chef Cookbook
+<p><img src="https://i.imgur.com/IBNz2CM.jpg" alt="0xO1 logo" title="0xO1" align="right" height="80" /></p>
+
+Chef Cookbook :zero::one: {Cookbook}
 =========
 [![Supermarket Cookbook](*cookbook-shield-link*)](--cookbook-link--)
 [![GitHub release (latest by date)](==cookbook-link--)
@@ -67,7 +69,7 @@ Examples and Common Usage
 
 default example:
 ```json
-"0x0I.<role>": {
+"<role>": {
   "<attribute.1>": "<value.1>",
   "<attribute.2>": {
     "<key.1>": "<value.1>"
