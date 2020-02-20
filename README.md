@@ -1,10 +1,10 @@
+<p><img src="https://siliconangle.com/wp-content/blogs.dir/1/files/2018/02/1486909_635690216474466_54627279_n.png" alt="ansible logo" title="ansible" align="left" height="80" /></p>
 <p><img src="https://i.imgur.com/IBNz2CM.jpg" alt="0xO1 logo" title="0xO1" align="right" height="80" /></p>
 
 Chef Cookbook :zero::one: {Cookbook}
 =========
 [![Supermarket Cookbook](*cookbook-shield-link*)](--cookbook-link--)
 [![GitHub release (latest by date)](==cookbook-link--)
-[![Downloads](*downloads-shield-link*)](--cookbook-link--)
 [![Build Status](*build-shield-link*)](--cookbook-link--)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
 
